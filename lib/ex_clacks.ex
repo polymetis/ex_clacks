@@ -1,5 +1,4 @@
 defmodule ExClacks do
-  import Plug.Conn
   alias Plug.Conn
 
   @doc """
