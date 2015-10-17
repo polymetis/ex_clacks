@@ -36,7 +36,7 @@ defmodule ExClacks.Mixfile do
 
   def package do
     %{
-      maintainer: ["'Ley Missailidis"]
+      maintainer: ["'Ley Missailidis"],
       licenses: ["MIT"],
       links: %{
         "GitHub": "https://github.com/polymetis/ex_clacks"
