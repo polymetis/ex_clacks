@@ -1,6 +1,18 @@
 # ExClacks
+This adds 'x-clacks-overhead: GNU Terry Pratchett' to your http response headers when added to a pipeline of plugs.
 
-**TODO: Add description**
+For a deeper explantion of why you would want to do this please visit http://www.gnuterrypratchett.com
+
+Or better yet read [Going Postal](http://www.goodreads.com/book/show/64222.Going_Postal) or really any of [Terry Prachett's books](http://www.goodreads.com/author/show/1654.Terry_Pratchett)
+
+####Example:
+```elixir
+  pipeline :browser do
+    plug :accepts, ["html"]
+    plug :fetch_session
+    plug ExClacks
+  end
+```
 
 ## Installation
 
