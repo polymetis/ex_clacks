@@ -20,9 +20,11 @@ defmodule ExClacks do
   alias Plug.Conn
 
   @impl true
+  @spec init(Plug.opts()) :: Plug.opts()
   def init(opts), do: opts
 
   @impl true
+  @spec call(Plug.Conn.t(), Plug.opts()) :: Plug.Conn.t()
   def call(conn, _opts) do
     Conn.put_resp_header(conn, "x-clacks-overhead", "GNU Terry Pratchett")
   end
