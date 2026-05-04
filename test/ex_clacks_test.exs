@@ -1,12 +1,11 @@
 defmodule ExClacksTest do
   use ExUnit.Case
-  doctest ExClacks
-  use Plug.Test
+  import Plug.Test
+  import Plug.Conn
 
   test "You know they'll never really die while the Trunk is alive[...]" do
-    conn = conn(:head, "/")
-      |> ExClacks.call
+    conn = ExClacks.call(conn(:get, "/"), ExClacks.init([]))
 
-    assert Plug.Conn.get_resp_header(conn, "x-clacks-overhead") == ["GNU Terry Pratchett"]
+    assert get_resp_header(conn, "x-clacks-overhead") == ["GNU Terry Pratchett"]
   end
 end
