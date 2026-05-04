@@ -11,7 +11,6 @@ defmodule ExClacks.MixProject do
       elixir: "~> 1.15",
       deps: deps(),
       package: package(),
-      description: "A Plug that pays homage to Terry Pratchett",
       source_url: @source_url,
       docs: docs()
     ]
@@ -30,8 +29,9 @@ defmodule ExClacks.MixProject do
 
   defp package do
     %{
+      description: "A Plug that pays homage to Terry Pratchett",
       licenses: ["MIT"],
-      files: ~w(lib mix.exs README.md LICENSE.md CHANGELOG.md),
+      files: ~w(lib mix.exs .formatter.exs README.md LICENSE.md CHANGELOG.md),
       links: %{"GitHub" => @source_url}
     }
   end
