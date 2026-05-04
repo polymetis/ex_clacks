@@ -30,7 +30,6 @@ defmodule ExClacks.MixProject do
 
   defp package do
     %{
-      maintainers: ["'Ley Missailidis"],
       licenses: ["MIT"],
       files: ~w(lib mix.exs README.md LICENSE.md CHANGELOG.md),
       links: %{"GitHub" => @source_url}
