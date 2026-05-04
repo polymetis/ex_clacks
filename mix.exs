@@ -1,7 +1,7 @@
 defmodule ExClacks.MixProject do
   use Mix.Project
 
-  @version "0.1.1"
+  @version "1.0.0"
   @source_url "https://github.com/polymetis/ex_clacks"
 
   def project do
@@ -34,7 +34,7 @@ defmodule ExClacks.MixProject do
     %{
       maintainers: ["'Ley Missailidis"],
       licenses: ["MIT"],
-      files: ~w(lib mix.exs README.md LICENSE.md),
+      files: ~w(lib mix.exs README.md LICENSE.md CHANGELOG.md),
       links: %{"GitHub" => @source_url}
     }
   end
@@ -44,7 +44,7 @@ defmodule ExClacks.MixProject do
       main: "ExClacks",
       source_url: @source_url,
       source_ref: "v#{@version}",
-      extras: ["README.md"]
+      extras: ["README.md", "CHANGELOG.md", "LICENSE.md"]
     ]
   end
 end
