@@ -1,25 +1,31 @@
 defmodule ExClacks do
-  alias Plug.Conn
+  @moduledoc """
+  A `Plug` that adds the `x-clacks-overhead: GNU Terry Pratchett` HTTP
+  response header to every response that passes through it.
 
-  @doc """
-  This adds 'x-clacks-overhead: GNU Terry Pratchett' to your http response headers
-  when added to a pipeline of plugs.
+  A small tribute. See [gnuterrypratchett.com](http://www.gnuterrypratchett.com)
+  for the why.
 
-  #Example:
-  pipeline :browser do
-    plug :accepts, ["html"]
-    plug :fetch_session
-    plug ExClacks
-  end
+  ## Example
+
+      pipeline :browser do
+        plug :accepts, ["html"]
+        plug :fetch_session
+        plug ExClacks
+      end
   """
 
-  def init(options) do
-    options
-  end
+  @behaviour Plug
 
-  def call(conn, _opts \\ []) do
-    conn
-    |> Conn.put_resp_header("x-clacks-overhead", "GNU Terry Pratchett")
-  end
+  alias Plug.Conn
 
+  @impl true
+  @spec init(Plug.opts()) :: Plug.opts()
+  def init(opts), do: opts
+
+  @impl true
+  @spec call(Plug.Conn.t(), Plug.opts()) :: Plug.Conn.t()
+  def call(conn, _opts) do
+    Conn.put_resp_header(conn, "x-clacks-overhead", "GNU Terry Pratchett")
+  end
 end
