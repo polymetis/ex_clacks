@@ -1,5 +1,10 @@
 # ExClacks
 
+[![Hex.pm](https://img.shields.io/hexpm/v/ex_clacks.svg)](https://hex.pm/packages/ex_clacks)
+[![HexDocs](https://img.shields.io/badge/hex-docs-lightgreen.svg)](https://hexdocs.pm/ex_clacks)
+[![CI](https://github.com/polymetis/ex_clacks/actions/workflows/ci.yml/badge.svg)](https://github.com/polymetis/ex_clacks/actions/workflows/ci.yml)
+[![License](https://img.shields.io/hexpm/l/ex_clacks.svg)](https://github.com/polymetis/ex_clacks/blob/main/LICENSE.md)
+
 A `Plug` that adds `x-clacks-overhead: GNU Terry Pratchett` to your HTTP
 response headers when added to a pipeline of plugs.
 
