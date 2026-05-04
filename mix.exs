@@ -8,9 +8,7 @@ defmodule ExClacks.MixProject do
     [
       app: :ex_clacks,
       version: @version,
-      elixir: "~> 1.14",
-      build_embedded: Mix.env() == :prod,
-      start_permanent: Mix.env() == :prod,
+      elixir: "~> 1.15",
       deps: deps(),
       package: package(),
       description: "A Plug that pays homage to Terry Pratchett",
